@@ -266,4 +266,108 @@ a {
             }
         }
     }
+    &-best{
+        &__icon{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 4px;
+            font-size: 2rem !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: purple;
+            position: relative;
+            z-index: 1;
+            &:after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background-color: currentColor;
+                opacity: 0.25;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            &--red{
+                color: red;
+            }
+            &--blue{
+                color: blue;
+            }
+            &--green{
+                color: green;
+            }
+        }
+        &__title{
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        &__desc{
+            font-weight: 300;
+        }
+        &__list{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: -5rem;
+        }
+        &__item{
+            width: calc(50% - 3rem);
+            margin-bottom: 1rem;
+        }
+    }
+}
+.text-clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &--2{
+        -webkit-line-clamp: 2;
+    }
+}
+.partner{
+    margin-bottom: 19rem;
+    &__container{
+        max-width: 83rem;
+        text-align: center;
+    }
+    &__title{
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 7rem;
+        padding-bottom: 7rem;
+        border-bottom: 1px solid currentColor;
+    }
+    &__list{
+        @include flexBox(center, space-between);
+    }
+}
+.connect{
+    text-align: center;
+    margin-bottom: 17rem;
+    &__title{
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 3.5rem;
+    }
+    &__notice{
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 6rem;
+        span{
+            color: $primary-color;
+        }
+    }
+    &__list{
+        @include flexBox(stretch, space-between);
+    }
+    &__item{
+        width: calc(25% - 22.5px);
+    }
 }
